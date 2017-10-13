@@ -1,10 +1,6 @@
-<h1>New Contact</h1>
-<form action="/">
-  <label for="new-name">Name:</label>
-  <input id="new-name" name="new-name" type="text">
-  <label for="new-phoneNumber">Phone Number:</label>
-  <input id="new-phoneNumber" name="new-phoneNumber" type="text">
-  <label for="new-address">Address:</label>
-  <input id="new-address" name="new-address" type="text">
-  <button type="submit">Submit</button>
-</form>
+<h1>You've added a new contact!</h1>
+<p>@Model.GetName()</p>
+<p>@Model.GetPhoneNumber()</p>
+<p>@Model.GetAddress()</p>
+<p><a href="/contact/form">Add another contact</a></p>
+<p><a href="/">View current contacts</a></p>
