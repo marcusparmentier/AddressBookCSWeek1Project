@@ -30,11 +30,18 @@ namespace AddressBookCS.Controllers
     }
 
     [HttpGet("/contact/{id}")]
-        public ActionResult ContactDetail(int id)
-        {
-            Contact contact = Contact.Find(id);
-            return View(contact);
-        }
+    public ActionResult ContactDetail(int id)
+    {
+      Contact contact = Contact.Find(id);
+      return View(contact);
+    }
+
+    [HttpPost("/contacts/clear")]
+    public ActionResult ContactsCleared()
+    {
+      Contact.ClearAll();
+      return View();
+    }
   }
 }
 

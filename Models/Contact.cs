@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-// using System;
+
 
 namespace AddressBookCS.Models
 {
@@ -42,9 +42,15 @@ namespace AddressBookCS.Models
     {
       return _instances;
     }
+
     public static Contact Find(int searchId)
     {
       return _instances[searchId-1];
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }
