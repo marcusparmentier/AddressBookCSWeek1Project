@@ -11,10 +11,11 @@ A MVC app created with C Sharp and use of Razor and .NET framework focusing on c
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **User creates a contact and displays list of contacts in index page** | User input: "Joe", "555-5555", "123 Abc St. Seattle, WA" | Output: "Joe, 555-5555, 123 Abc St. Seattle, WA" |
-| **User can click on contact and view contact details** | User Input: "Clicks 'Joe' in contact list" | Output: ""Joe, 555-5555, 123 Abc St. Seattle, WA"" |
-| **3rd**| Input: " " | Output: " " |
-| **4th**| Input: " " | Output: " " |
+| **1st: User creates a contact and displays list of contacts in index page** | User input: "Joe", "555-5555", "123 Abc St. Seattle, WA" | Output: "Joe, 555-5555, 123 Abc St. Seattle, WA" |
+| **2nd: User can add multiple contacts and display results on index**| Input: "Mike", "555-6666", "456 Xyz Rd. Seattle, WA" | Output: "Mike, 555-6666, 456 Xyz Rd. Seattle, WA" |
+| **3rd: User can click on contact and view contact details** | User Input: "Clicks 'Joe' in contact list" | Output: ""Joe, 555-5555, 123 Abc St. Seattle, WA"" |
+| **4th: User can clear contacts from the homepage**| Input: "User clicks 'clear' button" | Output: "Address book cleared" |
+
 
 ## Setup/Installation Requirements
 

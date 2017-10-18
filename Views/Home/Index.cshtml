@@ -1,14 +1,13 @@
 <h1>Contact List</h1>
 <ul>
-  @foreach(var Contact in Model)
+  @foreach(var contact in Model)
   {
-      <li>@Contact.GetName()</li>
-      <ul>
-        <li>@Contact.GetPhoneNumber()</li>
-        <li>@Contact.GetAddress()</li>
-      </ul>
+      <li><a href='/contact/@contact.GetId()'>@contact.GetName()</a></li>
   }
 </ul>
 <br>
 
 <h3><a href='/contact/form'>Add a new Contact</a></h3>
+
+
+  @* @for(int i = 0; i > List.length; i++) *@

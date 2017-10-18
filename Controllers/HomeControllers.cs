@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using AddressBookCS.Models;
 using System.Collections.Generic;
-
+// using System;
 
 namespace AddressBookCS.Controllers
 {
@@ -26,9 +26,15 @@ namespace AddressBookCS.Controllers
     {
       Contact newContact = new Contact (Request.Form["new-name"], Request.Form["new-phoneNumber"], Request.Form["new-address"]);
 
-      newContact.Save();
       return View(newContact);
     }
+
+    [HttpGet("/contact/{id}")]
+        public ActionResult ContactDetail(int id)
+        {
+            Contact contact = Contact.Find(id);
+            return View(contact);
+        }
   }
 }
 

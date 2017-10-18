@@ -8,6 +8,7 @@ namespace AddressBookCS.Models
     private string _name;
     private string _phoneNumber;
     private string _address;
+    private int _id;
     private static List<Contact> _instances = new List<Contact> {};
 
     //Constructor
@@ -16,6 +17,8 @@ namespace AddressBookCS.Models
       _name = name;
       _phoneNumber = phoneNumber;
       _address = address;
+      _instances.Add(this);
+      _id = _instances.Count;
     }
 
     public string GetName()
@@ -30,14 +33,18 @@ namespace AddressBookCS.Models
     {
       return _address;
     }
+    public int GetId()
+    {
+      return _id;
+    }
 
     public static List<Contact> GetAll()
     {
       return _instances;
     }
-    public void Save()
+    public static Contact Find(int searchId)
     {
-      _instances.Add(this);
+      return _instances[searchId-1];
     }
   }
 }
